@@ -4,6 +4,7 @@ import string
 print("Aditya's random password generator")
 
 def myPass():
+    
     length = int(input("enter length of password"))
 
     lower = string.ascii_lowercase
@@ -13,8 +14,13 @@ def myPass():
 
     combine = lower + upper + number + special
 
-    x = random.sample(combine, length)      
-    password ="".join(x)        
+    # always return new value
+    x = random.sample(combine, length)  
+
+    # string join method
+    password ="".join(x)    
+    
     print(password)
+    
     myPass()            
 myPass()
